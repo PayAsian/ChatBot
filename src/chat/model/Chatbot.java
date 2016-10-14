@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 /**
  * Base version of the 2015 Chatbot class. Only stub methods are provided.
- * Students will complete methods as part * of the project. * @author Cody
- * Henrichsen * @version 1.0 10/14/15
+ * Students will complete methods as part 
+ * * of the project. 
+ * * @author Peyton Trevino 
+ * * @version 1.0 10/14/16
  */
 public class Chatbot
 {
@@ -27,10 +29,12 @@ public class Chatbot
 
 	private void buildMemesList()
 	{
+	
 	}
 
 	private void buildPoliticalTopicsList()
 	{
+		
 	}
 
 	/**

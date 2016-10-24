@@ -24,6 +24,7 @@ public class Chatbot
 	{
 		this.memesList = new ArrayList<String>();
 		this.userName = new String(userName);
+		this.content = new String("absolutely anything");
 
 	}
 
@@ -77,7 +78,12 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
-		return false;
+		
+		boolean haspoliticalTopic;
+		
+		
+		
+		return politicalTopiclist;
 	}
 
 	/**
@@ -126,7 +132,7 @@ public class Chatbot
 	 */
 	public ArrayList<String> getPoliticalTopicList()
 	{
-		return null;
+		return politicalTopicList;
 	}
 
 	/**

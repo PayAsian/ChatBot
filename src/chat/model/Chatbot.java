@@ -22,6 +22,7 @@ public class Chatbot
 	 */
 	public Chatbot(String userName)
 	{
+		this.politicalTopicList = new ArrayList<String>();
 		this.memesList = new ArrayList<String>();
 		this.userName = new String(userName);
 		this.content = new String("Snowboarding");
@@ -88,14 +89,16 @@ public class Chatbot
 	 * does not match.
 	 * 
 	 * @param currentInput
-	 *            The supplied String to be checked. * @return Whether the
+	 *            The supplied String to be checked. *
+	 *             @return Whether the
 	 *            String is contained in the ArrayList.
 	 */
+
 	public boolean politicalTopicChecker(String currentInput)
 	{
 		boolean haspoliticalTopicChecker = false;
 		
-		if(haspoliticalTopicChecker.contains(testBuildPoliticalTopicList))
+		if(haspoliticalTopicChecker.contains(buildPoliticalTopicLists))
 		{
 			haspoliticalTopicChecker = true;
 		}
@@ -110,9 +113,16 @@ public class Chatbot
 	 *            The supplied String to be checked. * @return Whether the
 	 *            supplied String is a recognized meme.
 	 */
-	public boolean memeChecker(String currentInput)
+	public boolean memeChecker(String currentString)
 	{
-		return false;
+		boolean hasmemeChecker = false;
+		
+		if(hasmemeChecker.contains(memesList))
+		{
+			hasmemeChecker =  true;
+		}
+		
+		return memesList;
 	}
 
 	/**
@@ -143,8 +153,8 @@ public class Chatbot
 	}
 
 	/**
-	 * * Getter method for the politicalTopicList object. * @return The
-	 * reference to the political topic list.
+	 * * Getter method for the politicalTopicList object. 
+	 * * @return The reference to the political topic list.
 	 */
 	public ArrayList<String> getPoliticalTopicList()
 	{
@@ -152,7 +162,8 @@ public class Chatbot
 	}
 
 	/**
-	 * * Updates the content area for this Chatbot instance. * @param content
+	 * * Updates the content area for this Chatbot instance. 
+	 * * @param content
 	 * The updated value for the content area.
 	 */
 	public void setContent(String content)

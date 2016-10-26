@@ -20,11 +20,37 @@ public class ChatbotController
 	
 	public void start()
 	{
-		String response = "talking to you";
+		
+		String response = chatView.collectResponse("What do you want ot talk aobut today?????");
 		
 		while(stupidBot.lengthChecker(response))
 		{
-			response = chatView.collectResponse("Do you want to play a game?");
+			response = chatView.collectResponse("Oh, you are interested in " + response);
+			chatView.displayMessage(useChatbotCheckers(response));
 		}
+	
+	if("".equals(""))
+		{
+		
+		}
+		
+	}
+	private String useChatbotCheckers(String input)
+	{
+		String answer = "";
+		
+		if(stupidBot.contentChecker(input))
+		{
+			answer += "\nYou know my special scret\n";
+		}
+		if(stupidBot.memeChecker(input))
+		{
+			answer += "\nI can has memes?\n";
+		}
+		if(answer.length() == 0)
+		{
+			answer += "sorry, i dont know about " + input;
+		}
+		return answer;
 	}
 }

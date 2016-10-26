@@ -27,7 +27,7 @@ public class Chatbot
 		this.userName = new String(userName);
 		this.content = new String("Snowboarding");
 		this.buildMemesList();
-		this.buildPoliticalTopicsList();
+		this.buildPoliticalTopicList();
 	
 	}
 
@@ -42,9 +42,13 @@ public class Chatbot
 		
 	}
 
-	private void buildPoliticalTopicsList()
+	private boolean buildPoliticalTopicList()
 	{
+		boolean buildPoliticalTopicLists;
 		
+		boolean PoliticalTopicList = false;
+		
+		return PoliticalTopicList;
 	}
 
 	/**
@@ -98,7 +102,7 @@ public class Chatbot
 	{
 		boolean haspoliticalTopicChecker = false;
 		
-		if(haspoliticalTopicChecker.contains(buildPoliticalTopicLists))
+		if(haspoliticalTopicChecker.contains(PoliticalTopicList))
 		{
 			haspoliticalTopicChecker = true;
 		}
@@ -117,12 +121,12 @@ public class Chatbot
 	{
 		boolean hasmemeChecker = false;
 		
-		if(hasmemeChecker.contains(memesList))
+		if(hasmemeChecker.contains(MemesList))
 		{
 			hasmemeChecker =  true;
 		}
 		
-		return memesList;
+		return MemesList;
 	}
 
 	/**

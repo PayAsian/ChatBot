@@ -100,13 +100,13 @@ public class Chatbot
 
 	public boolean politicalTopicChecker(String currentInput)
 	{
-		boolean haspoliticalTopicChecker = false;
+		boolean politicalTopicChecker = false;
 		
-		if(haspoliticalTopicChecker.contains(PoliticalTopicList))
+		if(politicalTopicChecker.contains(politicalTopicList))
 		{
-			haspoliticalTopicChecker = true;
+			politicalTopicChecker = true;
 		}
-		return haspoliticalTopicChecker;
+		return politicalTopicChecker;
 	}
 
 	/**

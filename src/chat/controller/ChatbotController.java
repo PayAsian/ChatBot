@@ -20,13 +20,13 @@ public class ChatbotController
 	
 	public void start()
 	{
-		
-		String response = chatView.collectResponse("What do you want ot talk aobut today?????");
+		chatView.displayMessage(useChatbotCheckers(response));
+		String response = chatView.collectResponse("What do you want to talk aobut today?????");
 		
 		while(stupidBot.lengthChecker(response))
 		{
 			response = chatView.collectResponse("Oh, you are interested in " + response);
-			chatView.displayMessage(useChatbotCheckers(response));
+			
 		}
 	
 	if("".equals(""))

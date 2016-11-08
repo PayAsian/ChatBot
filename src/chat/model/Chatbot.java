@@ -17,7 +17,8 @@ public class Chatbot
 	private String content;
 
 	/**
-	 * * Creates an instance of the Chatbot with the supplied username. * @param
+	 * * Creates an instance of the Chatbot with the supplied username. 
+	 * * @param
 	 * userName The username for the chatbot.
 	 */
 	public Chatbot(String userName)
@@ -31,23 +32,24 @@ public class Chatbot
 	
 	}
 
-	private boolean buildMemesList()
+	private boolean buildMemesList(boolean memeslist)
 	{
-		
-		boolean buildMemesList;
-		
 		boolean MemesList = false;
-		
+		if(MemesList !=null && MemesList.size() > 0 )
+		{
+			memeslist = true; 
+		}
 		return MemesList;
 		
 	}
 
-	private boolean buildPoliticalTopicList()
+	private boolean buildPoliticalTopicList(String politicaltopiclist)
 	{
-		boolean buildPoliticalTopicLists;
-		
 		boolean PoliticalTopicList = false;
-		
+		if(politicaltopiclist !=null && politicaltopiclist.length() > 0)
+		{
+			PoliticalTopicList = true; 
+		}
 		return PoliticalTopicList;
 	}
 
@@ -112,21 +114,20 @@ public class Chatbot
 	/**
 	 * * Checks to see that the supplied String value is in the current
 	 * memesList variable.
-	 * 
 	 * @param currentInput
-	 *            The supplied String to be checked. * @return Whether the
-	 *            supplied String is a recognized meme.
+	 * The supplied String to be checked. 
+	 * * @return Whether the supplied String is a recognized meme.
 	 */
 	public boolean memeChecker(String currentString)
 	{
 		boolean hasmemeChecker = false;
 		
-		if(hasmemeChecker.contains(MemesList))
+		if(hasmemeChecker.contains(memesList))
 		{
 			hasmemeChecker =  true;
 		}
 		
-		return MemesList;
+		return memesList;
 	}
 
 	/**
@@ -148,11 +149,13 @@ public class Chatbot
 	}
 
 	/**
-	 * * Getter method for the memesList object. * @return The reference to the
-	 * meme list.
+	 * * Getter method for the memesList object. 
+	 * * @return The reference to the meme list.
 	 */
+
 	public ArrayList<String> getMemesList()
 	{
+	
 		return memesList;
 	}
 

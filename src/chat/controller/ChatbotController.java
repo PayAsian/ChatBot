@@ -1,5 +1,6 @@
 package chat.controller;
 
+import chat.view.ChatFrame;
 import chat.model.Chatbot;
 import chat.view.ChatViewer;
 
@@ -9,9 +10,10 @@ public class ChatbotController
 	private Chatbot stupidBot;
 	private ChatViewer chatView;
 	
+	
 	public ChatbotController()
 	{
-		stupidBot = new Chatbot("SHOOT ME IN THE FACE!!! THE FACE!!");
+		stupidBot = new Chatbot("Penguin King");
 		chatView = new ChatViewer();
 	}
 	
@@ -20,7 +22,7 @@ public class ChatbotController
 	
 	public void start()
 	{
-		chatView.displayMessage(useChatbotCheckers(response));
+		
 		String response = chatView.collectResponse("What do you want to talk aobut today?????");
 		
 		while(stupidBot.lengthChecker(response))
@@ -35,7 +37,7 @@ public class ChatbotController
 		}
 		
 	}
-	private String useChatbotCheckers(String input)
+	public String useChatbotCheckers(String input)
 	{
 		String answer = "";
 		

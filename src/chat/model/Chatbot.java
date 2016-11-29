@@ -15,6 +15,7 @@ public class Chatbot
 	private ArrayList<String> politicalTopicList;
 	private String userName;
 	private String content;
+	
 
 	/**
 	 * * Creates an instance of the Chatbot with the supplied username. 
@@ -35,11 +36,11 @@ public class Chatbot
 	private boolean buildMemesList(boolean memeslist)
 	{
 		boolean MemesList = false;
-		if(MemesList !=null && MemesList.size() > 0 )
+		if(buildMemesList !=null && memesList.size() > 0 )
 		{
 			memeslist = true; 
 		}
-		return MemesList;
+		return memesList;
 		
 	}
 

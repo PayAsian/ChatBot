@@ -15,6 +15,11 @@ public class Chatbot
 	private ArrayList<String> politicalTopicList;
 	private String userName;
 	private String content;
+	private String buildMemeslist;
+	private String buildPoliticalTopicList;
+	private String memeChecker;
+	private String politicalTopicChecker; 
+
 	
 
 	/**
@@ -28,19 +33,22 @@ public class Chatbot
 		this.memesList = new ArrayList<String>();
 		this.userName = new String(userName);
 		this.content = new String("Snowboarding");
-		this.buildMemesList();
-		this.buildPoliticalTopicList();
+		this.buildMemeslist = new String();
+		this.buildPoliticalTopicList = new String();
+		this.politicalTopicChecker = new String();
+		this.memeChecker = new String();
+		
 	
 	}
 
-	private boolean buildMemesList(boolean memeslist)
+	private boolean buildMemeslist(boolean memeslist)
 	{
 		boolean MemesList = false;
-		if(buildMemesList !=null && memesList.size() > 0 )
+		if(buildMemeslist !=null && memesList.size() > 0 )
 		{
 			memeslist = true; 
 		}
-		return memesList;
+		return memeslist;
 		
 	}
 
@@ -101,11 +109,11 @@ public class Chatbot
 	 *            String is contained in the ArrayList.
 	 */
 
-	public boolean politicalTopicChecker(String currentInput)
+	public boolean politicalTopicChecker(String politicalTopicList)
 	{
 		boolean politicalTopicChecker = false;
 		
-		if(politicalTopicChecker.contains(politicalTopicList))
+		if(politicalTopicChecker.contains(buildPoliticalTopicList))
 		{
 			politicalTopicChecker = true;
 		}
@@ -119,16 +127,16 @@ public class Chatbot
 	 * The supplied String to be checked. 
 	 * * @return Whether the supplied String is a recognized meme.
 	 */
-	public boolean memeChecker(String currentString)
+	public boolean memeChecker(String memesList)
 	{
-		boolean hasmemeChecker = false;
+		boolean memeChecker = false;
 		
-		if(hasmemeChecker.contains(memesList))
+		if(memeChecker.contains(memesList))
 		{
-			hasmemeChecker =  true;
+			memeChecker =  true;
 		}
 		
-		return memesList;
+		return memeChecker;
 	}
 
 	/**

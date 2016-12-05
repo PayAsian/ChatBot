@@ -130,8 +130,8 @@ public class ChatbotTest
 		assertTrue("PoliticalTopicList Size check", sampleBot.getPoliticalTopicList().size() >= 18);
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Democrat"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Republican"));
-		assertFalse("Political Topic check - wrong date", sampleBot.getPoliticalTopicList().contains("11/4/16"));
-		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("11/8/16"));
+		assertFalse("Political Topic check - wrong date", sampleBot.getPoliticalTopicList().contains("11/8/16"));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("11/8/15"));
 		assertFalse("Political Topic check - case", sampleBot.getPoliticalTopicList().contains("republican"));
 		assertFalse("Political Topic check - case", sampleBot.getPoliticalTopicList().contains("democrat"));				
 		assertTrue("Topic check", sampleBot.getPoliticalTopicList().contains("liberal"));
@@ -143,7 +143,7 @@ public class ChatbotTest
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Stein"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Johnson"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("election"));
-		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Immirgration"));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Immigration"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Trump's Wall"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Gun problem"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Abortion"));
@@ -167,16 +167,28 @@ public class ChatbotTest
 	@Test
 	public void testPoliticalTopicChecker()
 	{
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Democrat"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Republican"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("11/8/16"));
-		assertFalse("Incorrect Political Topic check - date", sampleBot.politicalTopicChecker("11/8/15"));
-		assertFalse("Incorrect Political Topic check - case", sampleBot.politicalTopicChecker("trump"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Trump"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Hillary"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Clinton"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Stein"));
-		assertTrue("Incorrect Political Topic check", sampleBot.politicalTopicChecker("Johnson"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Democrat"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Republican"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("11/8/16"));
+		assertFalse("Correct Political Topic check - date", sampleBot.politicalTopicChecker("11/8/15"));
+		assertTrue("Correct Political Topic check - case", sampleBot.politicalTopicChecker("republican"));
+		assertTrue("Correct Political Topic check - case", sampleBot.politicalTopicChecker("democrat"));
+		assertFalse("Correct Political Topic check - case", sampleBot.politicalTopicChecker("liberal"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("conservative"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Trump"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Hillary"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Clinton"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Pence"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Stein"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Johnson"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("election"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Immigration"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Trump's Wall"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Gun problem"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Abortion"));
+		assertTrue("Correct Political Topic check", sampleBot.politicalTopicChecker("Isis"));
+		
+		
 	}
 
 	@Test

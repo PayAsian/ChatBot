@@ -109,15 +109,16 @@ public class Chatbot
 	 *            String is contained in the ArrayList.
 	 */
 
-	public boolean politicalTopicChecker(String politicalTopicList)
+	public boolean politicalTopicChecker(String politicalTopicChecker)
 	{
-		boolean politicalTopicChecker = false;
+		boolean haspoliticalTopicChecker = false;
 		
-		if(politicalTopicChecker.contains(buildPoliticalTopicList))
+		if(politicalTopicChecker.equals(politicalTopicList))
 		{
-			politicalTopicChecker = true;
+			haspoliticalTopicChecker = true;
 		}
-		return politicalTopicChecker;
+		
+		return haspoliticalTopicChecker;
 	}
 
 	/**
@@ -127,16 +128,16 @@ public class Chatbot
 	 * The supplied String to be checked. 
 	 * * @return Whether the supplied String is a recognized meme.
 	 */
-	public boolean memeChecker(String memesList)
+	public boolean memeChecker(String memesChecker)
 	{
-		boolean memeChecker = false;
+		boolean hasmemeChecker = false;
 		
-		if(memeChecker.contains(memesList))
+		if(memeChecker.contains((CharSequence) memesList))
 		{
-			memeChecker =  true;
+			hasmemeChecker = true;
 		}
 		
-		return memeChecker;
+		return hasmemeChecker;
 	}
 
 	/**
@@ -154,7 +155,7 @@ public class Chatbot
 	 */
 	public String getContent()
 	{
-		return null;
+		return content;
 	}
 
 	/**
